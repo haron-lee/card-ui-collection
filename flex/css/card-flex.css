@@ -1,0 +1,95 @@
+body {
+  height: 100vh;
+  background-color: rosybrown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+.card-container {
+  width: min(1224px, calc(100% - 60px));
+  padding: 30px;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 24px;
+}
+
+.card-item {
+  width: calc((100% - (24px * 3)) / 4);
+}
+
+@media (min-width:641px) and (max-width: 1024px) {
+  .card-item {
+      width: calc((100% - (24px * 2)) / 3);
+    }
+}
+
+@media (min-width:541px) and (max-width: 640px) {
+  .card-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+.card-item a {
+  text-decoration: none;
+  color: #29363D;
+  background-color: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  display: block;
+}
+
+.card-item img {
+  width: 100%;
+  aspect-ratio: 288/196;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+.card-text {
+  padding: 24px 16px 16px;
+}
+
+.card-text .title {
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-text .title+p {
+  font-size: 12px;
+  color: #5A6A72;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+  margin: 12px 0 16px 0;
+  height: 40px;
+}
+
+.underline {
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 6px;
+}

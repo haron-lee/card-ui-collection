@@ -1,0 +1,62 @@
+body {
+  background-color: rosybrown;
+}
+
+h2, p {
+  margin: 0;
+}
+
+.card-item {
+  width: 288px;
+}
+
+.card-item a {
+  text-decoration: none;
+  color: #29363D;
+  background-color: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  /* border-radius때문에 이미지가 튀어나갔을 경우 hidden */
+  overflow: hidden;
+  display: block;
+}
+
+.card-item img {
+  /* 부모 기준 너비 */
+  width: 100%;
+  /* 이미지 비율 정하기 */
+  aspect-ratio: 288/196;
+  /* 이미지 맞추기 */
+  object-fit: cover;
+  /* 이미지 밑에 여백 생겼을 경우 */
+  vertical-align: top;
+}
+
+.card-text {
+  padding: 24px 16px 16px;
+}
+
+.card-text .title {
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-text .title + p {
+  font-size: 12px;
+  color: #5A6A72;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+  margin: 12px 0 16px 0;
+}
+
+.underline {
+  text-decoration: underline;
+  font-size:14px;
+  font-weight: bold;
+  padding-left: 6px;
+}
